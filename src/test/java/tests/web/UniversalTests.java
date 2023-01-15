@@ -3,6 +3,7 @@ package tests.web;
 import data.PagesLinks;
 import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
 import tests.TestBase;
@@ -19,6 +20,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 @Epic(value = "Demo QA Site")
 @Feature(value = "All Pages")
 @Story(value = "Page titles and errors in console log")
+@Tag("ui")
 class UniversalTests extends TestBase {
 
     @Severity(TRIVIAL)

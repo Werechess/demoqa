@@ -3,6 +3,7 @@ package tests.web;
 import data.pages.BookStorePage;
 import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.CsvSource;
@@ -20,6 +21,7 @@ import static io.qameta.allure.SeverityLevel.*;
 @Epic(value = "Book Store Application")
 @Feature(value = "Book Store Page")
 @Story(value = "Book Store Search")
+@Tag("ui")
 class BookStoreTests extends TestBase {
 
     private final BookStorePage bookStorePage = new BookStorePage();

@@ -7,6 +7,7 @@ import data.models.Credentials;
 import data.pages.ProfilePage;
 import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import tests.TestBase;
 
@@ -21,6 +22,7 @@ import static io.qameta.allure.SeverityLevel.BLOCKER;
 @Epic(value = "Book Store Application")
 @Feature(value = "Profile Page")
 @Story(value = "Authorization")
+@Tag("ui")
 class AuthorizationTests extends TestBase {
 
     private final AuthorizationApi authorizationApi = new AuthorizationApi();

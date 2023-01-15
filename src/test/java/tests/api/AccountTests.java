@@ -5,6 +5,7 @@ import data.api.AuthorizationApi;
 import data.models.*;
 import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import tests.TestBaseApi;
 
@@ -23,6 +24,7 @@ import static org.hamcrest.CoreMatchers.is;
 @Epic(value = "Book Store Application")
 @Feature(value = "API")
 @Story(value = "Account API")
+@Tag("api")
 class AccountTests extends TestBaseApi {
 
     private final AuthorizationApi authorizationApi = new AuthorizationApi();

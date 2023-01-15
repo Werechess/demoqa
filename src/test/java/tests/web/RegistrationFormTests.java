@@ -4,6 +4,7 @@ import data.RegistrationData;
 import data.pages.RegistrationFormPage;
 import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import tests.TestBase;
 
@@ -16,6 +17,7 @@ import static io.qameta.allure.SeverityLevel.NORMAL;
 @Epic(value = "Demo QA")
 @Feature(value = "Practise Form")
 @Story(value = "Fill out a form")
+@Tag("ui")
 class RegistrationFormTests extends TestBase {
 
     private final RegistrationData data = new RegistrationData();

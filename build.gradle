@@ -65,3 +65,15 @@ tasks.withType(Test).configureEach {
         }
     }
 }
+
+tasks.register('apiTest', Test) {
+    useJUnitPlatform() {
+        includeTags "api"
+    }
+}
+
+tasks.register('uiTest', Test) {
+    useJUnitPlatform() {
+        includeTags "ui"
+    }
+}
