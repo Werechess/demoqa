@@ -6,7 +6,7 @@ import data.models.*;
 import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import tests.TestBase;
+import tests.TestBaseApi;
 
 import static config.user.UserProperties.PASSWORD;
 import static config.user.UserProperties.USERNAME;
@@ -23,7 +23,7 @@ import static org.hamcrest.CoreMatchers.is;
 @Epic(value = "Book Store Application")
 @Feature(value = "API")
 @Story(value = "Account API")
-class AccountTests extends TestBase {
+class AccountTests extends TestBaseApi {
 
     private final AuthorizationApi authorizationApi = new AuthorizationApi();
     private final Credentials credentials = new Credentials();

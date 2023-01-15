@@ -1,7 +1,7 @@
 package config;
 
 import com.codeborne.selenide.Configuration;
-import config.web.WebConfig;
+import config.web.LaunchConfig;
 import io.restassured.RestAssured;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
@@ -9,25 +9,25 @@ import java.util.Map;
 
 public class ProjectConfiguration {
 
-    private final WebConfig webConfig;
+    private final LaunchConfig config;
 
-    public ProjectConfiguration(WebConfig webConfig) {
-        this.webConfig = webConfig;
+    public ProjectConfiguration(LaunchConfig config) {
+        this.config = config;
     }
 
     public void apiConfig() {
-        RestAssured.baseURI = webConfig.baseURL();
+        RestAssured.baseURI = config.baseURL();
     }
 
     public void webConfig() {
-        Configuration.baseUrl = webConfig.baseURL();
-        Configuration.browser = webConfig.browserName().toString();
-        Configuration.browserSize = webConfig.browserSize();
-        Configuration.browserVersion = webConfig.browserVersion();
+        Configuration.baseUrl = config.baseURL();
+        Configuration.browser = config.browserName().toString();
+        Configuration.browserSize = config.browserSize();
+        Configuration.browserVersion = config.browserVersion();
         Configuration.holdBrowserOpen = false;
 
-        if (webConfig.isRemote()) {
-            Configuration.remote = webConfig.remoteURL();
+        if (config.isRemote()) {
+            Configuration.remote = config.remoteURL();
 
             DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setCapability("selenoid:options", Map.<String, Object>of(

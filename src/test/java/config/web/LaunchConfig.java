@@ -6,7 +6,7 @@ import org.aeonbits.owner.Config;
         "classpath:config/${env}.properties",
         "classpath:config/local.properties"
 })
-public interface WebConfig extends Config {
+public interface LaunchConfig extends Config {
 
     @Key("browserName")
     BrowserName browserName();
