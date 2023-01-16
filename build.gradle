@@ -62,7 +62,6 @@ tasks.withType(Test).configureEach {
     retry {
         maxRetries = 2
         maxFailures = 10
-        failOnPassedAfterRetry = true
     }
 
     testLogging {
