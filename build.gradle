@@ -23,6 +23,7 @@ dependencies {
             'org.aeonbits.owner:owner:1.0.12',
             'org.assertj:assertj-core:3.24.1',
             'org.junit.jupiter:junit-jupiter:5.9.1',
+            'org.junit.platform:junit-platform-engine:1.9.2',
             'org.slf4j:slf4j-simple:2.0.6'
     )
 }
@@ -51,11 +52,11 @@ tasks.withType(Test).configureEach {
 
     if (System.getProperty("threads") != null) {
         systemProperties += [
-                'junit.jupiter.execution.parallel.enabled'                 : true,
-                'junit.jupiter.execution.parallel.mode.default'            : 'same-thread',
-                'junit.jupiter.execution.parallel.mode.classes.default'    : 'concurrent',
-                'junit.jupiter.execution.parallel.config.strategy'         : 'fixed',
-                'junit.jupiter.execution.parallel.config.fixed.parallelism': System.getProperty("threads").toInteger()
+                'junit.jupiter.execution.parallel.enabled'             : true,
+                'junit.jupiter.execution.parallel.mode.default'        : 'concurrent',
+                'junit.jupiter.execution.parallel.mode.classes.default': 'concurrent',
+                'junit.jupiter.execution.parallel.config.strategy'     : 'custom',
+                'junit.jupiter.execution.parallel.config.custom.class' : 'helpers.CustomThreadsStrategy'
         ]
     }
 
