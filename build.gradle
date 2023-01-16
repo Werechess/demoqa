@@ -2,6 +2,7 @@ plugins {
     id 'java'
     id 'io.freefair.lombok' version '6.6.1'
     id 'io.qameta.allure' version '2.11.2'
+    id 'org.gradle.test-retry' version '1.5.0'
 }
 
 repositories {
@@ -58,22 +59,29 @@ tasks.withType(Test).configureEach {
         ]
     }
 
+    retry {
+        maxRetries = 2
+        maxFailures = 10
+        failOnPassedAfterRetry = true
+    }
+
     testLogging {
         lifecycle {
-            events "started", "skipped", "failed", "standard_error", "standard_out"
-            exceptionFormat "short"
+            events 'started', 'skipped', 'failed', 'standard_error', 'standard_out'
+            events 'started', 'skipped', 'failed', 'standard_error', 'standard_out'
+            exceptionFormat 'short'
         }
     }
 }
 
 tasks.register('apiTest', Test) {
     useJUnitPlatform() {
-        includeTags "api"
+        includeTags 'api'
     }
 }
 
 tasks.register('uiTest', Test) {
     useJUnitPlatform() {
-        includeTags "ui"
+        includeTags 'ui'
     }
 }
