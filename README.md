@@ -1,6 +1,8 @@
 # Test automation project for [DemoQA](https://demoqa.com)
 
-![Toolsqa.jpg](media/logotypes/Toolsqa.jpg)
+<p align="center">
+<img src="media/logotypes/Toolsqa.jpg" alt="Toolsqa">
+</p>
 
 > DemoQA is a demo site for QA engineers, learning selenium.\
 > Made by Tools QA.\
@@ -87,7 +89,7 @@ Additional parameters:
 > `-Denv=remote` can be added for remote tests execution when remote url is set in remote.properties
 
 `-Dtag=<tag>` - tests with this tag will be executed:
-> - *api*
+>- *api*
 >- *ui*
 
 Additional properties are retrieved from the corresponding properties files:
@@ -111,7 +113,7 @@ isRemote=
 remoteURL=
 ```
 
-> - *browserName* - browser for Web tests, chrome and firefox supported
+>- *browserName* - browser for Web tests, chrome and firefox supported
 >- *browserVersion* - version of browser for Web tests
 >- *browserSize* - size of browser for Web tests
 >- *baseUrl* - base URL for Web tests
@@ -125,7 +127,7 @@ username=
 password=
 ```
 
-> - *username* - for authorization by old user that has a Git Pocket Guide book added in profile
+>- *username* - for authorization by old user that has a Git Pocket Guide book added in profile
 >- *password* - used for all users in tests
 
 [Back to the table of contents ⬆](#TableOfContents)
@@ -133,12 +135,12 @@ password=
 ## <a name="RunInJenkins">Run in [Jenkins](https://jenkins.autotests.cloud/job/015-Kenzalani-demoqa)</a>
 
 Main page of the build:
-<p  align="center">
+<p align="center">
 <img src="media/screenshots/JenkinsBuildMainPage.png" alt="JenkinsBuildMainPage" width="950">
 </p>
 
 A parametrized Jenkins job can be launched with needed ***parameters***:
-<p  align="center">
+<p align="center">
 <img src="media/screenshots/JenkinsBuildParameters.png" alt="JenkinsBuildParameters" width="950">
 </p>
 
@@ -147,10 +149,10 @@ Relatively safe information transferred to the build by gradle arguments (see [G
 section, 'Additional parameters').
 
 After the build is done the test results are available in:
-> - <code><strong>*Allure Report*</strong></code>
+>- <code><strong>*Allure Report*</strong></code>
 >- <code><strong>*Allure TestOps*</strong></code> - results are uploaded there and the automated test-cases can be
    automatically updated accordingly to the recent changes in the code.
-<p  align="center">
+<p align="center">
 <img src="media/screenshots/JenkinsFinishedBuild.png" alt="JenkinsFinishedBuild" width="950">
 </p>
 
@@ -159,7 +161,7 @@ After the build is done the test results are available in:
 # <a name="TelegramNotifications">Telegram Notifications</a>
 
 Telegram bot sends a brief report to a specified telegram chat by results of each build.
-<p  align="center">
+<p align="center">
 <img src="media/screenshots/TelegramNotification.png" alt="TelegramNotification" width="550">
 </p>
 
@@ -171,7 +173,7 @@ Telegram bot sends a brief report to a specified telegram chat by results of eac
 
 Main page of Allure report contains the following blocks:
 
-> - <code><strong>*ALLURE REPORT*</strong></code> - displays date and time of the test, overall number of launched
+>- <code><strong>*ALLURE REPORT*</strong></code> - displays date and time of the test, overall number of launched
     tests, and a diagram with percent and number of passed, failed or broken tests
 >- <code><strong>*TREND*</strong></code> - displays trend of running tests for all runs
 >- <code><strong>*SUITES*</strong></code> - displays distribution of tests by suites
@@ -186,7 +188,7 @@ On the page the list of the tests grouped by suites with status shown for each t
 Full info about each test can be shown: tags, severity, duration, detailed steps.
 
 Also additional test artifacts are available:
-> - Screenshot
+>- Screenshot
 >- Page Source
 >- Browser console log
 >- Video
