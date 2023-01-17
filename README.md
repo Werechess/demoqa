@@ -198,7 +198,7 @@ Also additional test artifacts are available:
 </p>
 
 <p align="left">
-  <img src="media/screenshots/AllureReportBehaviors.png" alt="AllureReportBehaviors" width="950">
+  <img src="media/screenshots/AllureReportBehaviors.png" alt="AllureReportBehaviors" width="1150">
 </p>
 
 [Back to the table of contents ⬆](#TableOfContents)
@@ -217,7 +217,7 @@ Manual test-cases also can be added in TMS in case of need (via web interface or
 
 ## <a name="AllureTestOpsStartTests">Ability to start a run of custom set of tests from Allure TestOps</a>
 
-Any person not related to autotest creation can select a set of tests, environment parameter(RunIn) and start a run.\
+Any person not related to autotest creation can select a set of tests, environment parameters and start a run.\
 Allure TestOps run will be created, Jenkins job triggered with correct parameters. And results of the job will be
 seamlessly integrated into Allure TestOps.
 <p align="center">
@@ -232,6 +232,7 @@ and click "Close launch".
 </p>
 
 > After that all these test-cases(names, steps, tags etc.) will be updated according to the recent code changes.
+
 [Back to the table of contents ⬆](#TableOfContents)
 
 ## <a name="Dashboard">Dashboard</a>
@@ -255,11 +256,11 @@ Knows defects are automatically recognized by defined patterns for test fails in
 # <a name="Video">Video of running tests</a>
 
 <p align="center">
-  <img src="media/screenshots/VideoForm.gif" alt="VideoForm" width="1050">
+  <img src="media/screenshots/VideoForm.gif" alt="VideoForm" width="500">
 </p>
 
 <p align="center">
-  <img src="media/screenshots/VideoSearch.gif" alt="VideoSearch" width="1050">
+  <img src="media/screenshots/VideoSearch.gif" alt="VideoSearch" width="500">
 </p>
 
 [Back to the table of contents ⬆](#TableOfContents)
