@@ -12,9 +12,7 @@ public class RequestSpecs {
             .filter(withCustomTemplates())
             .log().uri();
 
-    public static RequestSpecification jsonRequestSpec = with()
-            .filter(withCustomTemplates())
-            .log().uri()
+    public static RequestSpecification jsonRequestSpec = requestSpec
             .log().body()
             .contentType(JSON);
 }

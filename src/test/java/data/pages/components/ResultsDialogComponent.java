@@ -24,7 +24,7 @@ public class ResultsDialogComponent {
     }
 
     public void checkVisible() {
-        dialogWindow.should(appear);
+        dialogWindow.shouldBe(visible);
         dialogHeader.shouldHave(text(DIALOG_HEADER_TEXT));
     }
 }

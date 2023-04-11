@@ -6,7 +6,8 @@ public class RegistrationData {
 
     private final RandomGeneration helper = new RandomGeneration();
 
-    public static final String SUBJECT = "Computer Science";
+    public static final String COMPUTER_SCIENCE = "Computer Science";
+    public static final String MATHS = "Maths";
     public static final String FIRST_HOBBY = "Sports";
     public static final String SECOND_HOBBY = "Reading";
     public static final String THIRD_HOBBY = "Music";

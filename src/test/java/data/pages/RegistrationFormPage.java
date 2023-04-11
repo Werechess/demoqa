@@ -65,8 +65,10 @@ public class RegistrationFormPage {
         return this;
     }
 
-    public RegistrationFormPage setSubjects(String value) {
-        subjectsAutocompleteInput.setValue(value).pressEnter();
+    public RegistrationFormPage setSubjects(String... subjects) {
+        for (String subject : subjects) {
+            subjectsAutocompleteInput.setValue(subject).pressEnter();
+        }
         return this;
     }
 

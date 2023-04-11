@@ -21,7 +21,8 @@ public enum Months {
         this.month = month;
     }
 
-    public String getMonth() {
+    @Override
+    public String toString() {
         return month;
     }
 }

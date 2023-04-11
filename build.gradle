@@ -13,7 +13,7 @@ def allureVersion = '2.20.1'
 
 dependencies {
     testImplementation(
-            'com.codeborne:selenide:6.11.0',
+            'com.codeborne:selenide:6.13.0',
             'com.fasterxml.jackson.core:jackson-annotations:2.14.1',
             'com.fasterxml.jackson.core:jackson-databind:2.14.1',
             'com.github.javafaker:javafaker:1.0.2',

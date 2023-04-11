@@ -27,17 +27,14 @@ public class TestBase {
     }
 
     @AfterEach
-    void addAttachments() {
+    void tearDown() {
         Attach.screenshotAs("Screenshot");
         Attach.pageSource();
         if (Objects.equals(System.getProperty("browserName"), "chrome")) {
             Attach.browserConsoleLogs();
         }
         Attach.addVideo();
-    }
 
-    @AfterEach
-    void clearCookies() {
         getWebDriver().manage().deleteAllCookies();
     }
 }

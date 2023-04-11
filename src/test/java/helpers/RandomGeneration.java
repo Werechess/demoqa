@@ -43,7 +43,7 @@ public class RandomGeneration {
 
     public String getRandomMonth() {
         int monthPick = new Random().nextInt(Months.values().length);
-        return String.valueOf(Months.values()[monthPick].getMonth());
+        return String.valueOf(Months.values()[monthPick]);
     }
 
     public String getRandomYear() {

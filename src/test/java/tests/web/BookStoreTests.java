@@ -37,19 +37,18 @@ class BookStoreTests extends TestBase {
     }
 
     static Stream<Arguments> shouldFindManyExistingBooksByTitle() {
-        return Stream.of(Arguments.of(List.of(
-                        "Learning JavaScript Design Patterns",
+        return Stream.of(Arguments.of("JavaScript",
+                List.of("Learning JavaScript Design Patterns",
                         "Speaking JavaScript",
                         "Programming JavaScript Applications",
-                        "Eloquent JavaScript, Second Edition"),
-                "JavaScript"));
+                        "Eloquent JavaScript, Second Edition")));
     }
 
     @Severity(CRITICAL)
     @DisplayName("Should find many existing books by keyword in title: ")
     @MethodSource()
-    @ParameterizedTest(name = "{1}")
-    void shouldFindManyExistingBooksByTitle(List<String> bookNames, String keyword) {
+    @ParameterizedTest(name = "{0}")
+    void shouldFindManyExistingBooksByTitle(String keyword, List<String> bookNames) {
         step("Open book store", bookStorePage::openPage);
         step("Search for books by keyword in title", () -> bookStorePage.search(keyword));
         step("Find all matching books", () -> bookStorePage.checkFoundBooks(bookNames));
